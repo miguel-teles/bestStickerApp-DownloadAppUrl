@@ -12,7 +12,7 @@ def apigw_event():
     """ Generates API GW Event"""
 
     return {
-        "body": '{ "versionName": "0.7"}',
+        "body": '',
         "resource": "/{proxy+}",
         "requestContext": {
             "resourceId": "123456",
@@ -36,7 +36,7 @@ def apigw_event():
             },
             "stage": "prod",
         },
-        "queryStringParameters": {"foo": "bar"},
+        "queryStringParameters": {"versionName": "0.7"},
         "headers": {
             "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",
             "Accept-Language": "en-US,en;q=0.8",

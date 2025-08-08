@@ -20,10 +20,10 @@ def generate_download_url(version_name):
 
 def lambda_handler(event, context):
     try:
-        body = event.get('body')
-        if body is None:
-            raise ValueError("Request body is required")
-        version_name = json.loads(body).get('versionName')
+        params = event.get('queryStringParameters')
+        if params is None:
+            raise ValueError("Params are required")
+        version_name = params.get('versionName')
         if version_name is None:
             raise ValueError("Version name is required")
 
