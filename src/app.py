@@ -1,8 +1,7 @@
 import os
 
 import boto3
-from botocore.signers import generate_presigned_url
-from common.utils import *
+from utils import *
 
 BUCKET_NAME = os.environ['BUCKET_NAME']
 
